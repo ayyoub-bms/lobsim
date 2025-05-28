@@ -1,0 +1,2 @@
+class OrderbookException(Exception):
+    pass
