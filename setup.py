@@ -1,6 +1,5 @@
 import os
 from setuptools import setup, find_packages
-from shutil import copytree
 
 
 def read_requirements():
@@ -12,16 +11,6 @@ def read_requirements():
 def find_scripts():
     root = "scripts"
     return [os.path.join(root, f) for f in os.listdir(root)]
-
-
-def copy_config_files():
-    config_dir = os.path.join(
-        os.environ.get("APPDATA")
-        or os.environ.get("XDG_CONFIG_HOME")
-        or os.path.join(os.environ["HOME"], ".config"),
-        "cryptoex",
-    )
-    copytree("config", config_dir, dirs_exist_ok=True)
 
 
 setup(
@@ -39,6 +28,3 @@ setup(
     packages=find_packages(),
     scripts=find_scripts(),
 )
-
-
-copy_config_files()
