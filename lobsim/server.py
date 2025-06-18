@@ -4,14 +4,14 @@ import json
 import asyncio
 import websockets
 from functools import partial
-from systematic.engine.orderbook import Orderbook
-from systematic.engine.orders import OrderType
-from systematic.engine.orders import Side
-from systematic.engine.config import NetworkConfig
-from systematic.engine.config import ExchangeConfig
-from systematic.engine.utils import build_message
-from systematic.engine.utils import _PubSub
-from systematic.markets.instruments.instrument import Instrument
+from lobsim.orderbook import Orderbook
+from lobsim.orders import OrderType
+from lobsim.orders import Side
+from lobsim.config import NetworkConfig
+from lobsim.config import ExchangeConfig
+from lobsim.utils import build_message
+from lobsim.utils import _PubSub
+from lobsim.instruments import Instrument
 
 logger = logging.getLogger(__name__)
 
