@@ -2,16 +2,15 @@ import logging
 
 from typing import Callable, override
 
-from systematic.markets.instruments import Instrument, instruments
-from systematic.markets.exchanges.exchange import AsyncExchange
-from systematic.engine.orders import Side
-from systematic.engine.orders import OrderType
-from systematic.engine.client import WebsocketClient
+from lobsim.instruments import Instrument, instruments
+from lobsim.orders import Side
+from lobsim.orders import OrderType
+from lobsim.client import WebsocketClient
 
 logger = logging.getLogger(__name__)
 
 
-class VirtualExchange(AsyncExchange):
+class VirtualExchange():
 
     name = "Simulation"
 

@@ -1,13 +1,12 @@
 import sys
-import logging
 import uuid
 import numpy as np
 import time
 
-from engine.orderbook import Orderbook
-from engine.orders import Side
-from engine.utils import is_divisible
-from markets.instruments.test import test_instrument
+from lobsim.orderbook import Orderbook
+from lobsim.orders import Side
+from lobsim.utils import is_divisible
+from lobsim.instruments import test_instrument
 
 order_ids = []
 
@@ -66,9 +65,7 @@ order_details = None
 def order():
     global order_details
     while True:
-        rnd_time = 3 * np.random.rand()
         cancel, limit, market = np.random.multinomial(1, pvals=[.3, .5, .2])
-        string = ""
         if limit:
             side, price, quantity = next(gen_limit())
             lob.on_limit(side=side, price=price, quantity=quantity, client_id=client_id)

@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from typing import Self, Callable, TypeAlias
 from termcolor import colored
 
-from systematic.engine.orders import Side
+from lobsim.orders import Side
 
 logger = logging.getLogger(__name__)
 

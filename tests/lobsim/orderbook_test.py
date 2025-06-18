@@ -1,8 +1,7 @@
 import pytest
-from systematic.engine.orderbook import Orderbook
-from systematic.engine.orders import Side
-from systematic.markets.instruments import Instrument
-from systematic.markets.instruments.instrument import LotSize, Precision, PriceDetails
+from lobsim.orderbook import Orderbook
+from lobsim.orders import Side
+from lobsim.instruments import Instrument, LotSize, Precision, PriceDetails
 
 
 def send_private(client_id=None, message=None):

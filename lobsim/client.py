@@ -4,8 +4,8 @@ import logging
 import websockets
 from typing import Callable
 from websockets.asyncio.client import connect
-from systematic.engine.config import NetworkConfig
-from systematic.engine.utils import build_message
+from lobsim.config import NetworkConfig
+from lobsim.utils import build_message
 
 logger = logging.getLogger(__name__)
 
